@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide overflow to create a full-screen effect */
+        }
+
+        .sky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/jpeg;base64,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'); /* Replace with your sky image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Place the sky behind other elements */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Ensure container stays above background */
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            color: #333333;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .kite-container {
+            position: relative;
+            margin-top: 20px;
+            z-index: 2; /* Place kite container above the sky */
+        }
+
+        .kite {
+            position: absolute;
+            animation: floatAnimation 5s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .wish-message {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #e74c3c; /* Red color for the wish message */
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 1s ease-in-out 7s forwards; /* Delayed fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>Happy Makar Sankranti!</title>
+</head>
+<body>
+    <!-- Sky background -->
+    <div class="sky"></div>
+
+    <!-- Main content container -->
+    <div class="container">
+        <h1>Wishing You a Happy Makar Sankranti!</h1>
+        <p>May this festival bring joy, prosperity, and good harvest to your life.</p>
+        
+        <!-- Kite container -->
+        <div class="kite-container">
+            <img src="kite1.png" alt="Kite 1" class="kite" style="left: 50px; top: 50px;">
+            <img src="kite2.png" alt="Kite 2" class="kite" style="left: 200px; top: 100px;">
+            <img src="kite3.png" alt="Kite 3" class="kite" style="left: 350px; top: 80px;">
+            <!-- Add more kite images and adjust positions as needed -->
+        </div>
+
+        <!-- Wish message -->
+        <div class="wish-message">
+            Happy Makar Sankranti!
+        </div>
+    </div>
+</body>
+</html>
